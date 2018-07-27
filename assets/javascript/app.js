@@ -28,14 +28,18 @@ $.ajax({
             var rating = results[i].rating;
             //variable to print the rating to the html page
             var p = $("<p>").text("Rating: " + rating);
+            console.log("rating is " + rating);
             //image tag for the gif
             var gifImage = $("<img>");
             //attaches image tag to the image
             gifImage.attr("src", results[i].images.fixed_height.url);
+            console.log("image gif");
             //append the paragraph to the html
             gifDiv.append(p);
             //append image to html
             gifDiv.append(gifImage);
+            //add new gif to top of page
+            $("#gif-div").prepend(gifDiv);
         }
     }
 })
