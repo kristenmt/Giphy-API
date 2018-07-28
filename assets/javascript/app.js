@@ -1,13 +1,13 @@
 // makes sure html is loaded before running script
 $(document).ready(function() {
 //array of topics for the gif buttons    
-var topics=["babies", "twins", "retro", "dancing", "parents", "rock", "80s", "pets", "excited", "vintage"];
+var topics=["dogs", "cats", "rabbits", "birds", "turtles", "dolphins", "hedgehogs", "tigers", "zebras", "elephants"];
 //starts the script when each button is clicked
 $("button").on("click", function(){
 //creating a variable for the "this" function when clicked
-var kids = $(this).attr("data-kids");
+var videos = $(this).attr("data-animals");
 //variable to name url to get the gifs from along with category and my API key, defines max of 10 images to return
-var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + kids + "&api_key=Vb0lSKUoCEct0qrvHqqUYbobJJYABtKP&limit=10";
+var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + videos + "&api_key=Vb0lSKUoCEct0qrvHqqUYbobJJYABtKP&limit=10";
 
 //tells ajax to get the info from the url
 $.ajax({
@@ -16,6 +16,8 @@ $.ajax({
 })
 //the promise for the API
 .then(function(response){
+    console.log(queryURL);
+    console.log(response);
     //results will be stored in results variable
     var results = response.data;
     //for loop to loop through the results
