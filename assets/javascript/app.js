@@ -1,11 +1,11 @@
 // makes sure html is loaded before running script
 $(document).ready(function() {
 //array of topics for the gif buttons    
-var topics=["dogs", "cats", "rabbits", "birds", "turtles", "dolphins", "hedgehogs", "tigers", "zebras", "elephants"];
+var topics=["michael jackson", "david bowie", "peter gabriel", "madonna", "huey lewis", "guns n roses", "tears for fears", "inxs", "whitney houston", "cindi lauper"];
 //starts the script when each button is clicked
 $("button").on("click", function(){
 //creating a variable for the "this" function when clicked
-var videos = $(this).attr("data-animals");
+var videos = $(this).attr("data-singers");
 //variable to name url to get the gifs from along with category and my API key, defines max of 10 images to return
 var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + videos + "&api_key=Vb0lSKUoCEct0qrvHqqUYbobJJYABtKP&limit=10";
 
@@ -34,7 +34,7 @@ $.ajax({
             //image tag for the gif
             var gifImage = $("<img>");
             //attaches image tag to the image
-            gifImage.attr("src", results[i].images.fixed_height.url);
+            gifImage.attr("src", results[i].images.fixed_height_still.url);
             console.log("image gif");
             //append the paragraph to the html
             gifDiv.append(p);
