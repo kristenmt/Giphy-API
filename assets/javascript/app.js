@@ -35,6 +35,7 @@ $.ajax({
             var gifImage = $("<img>");
             //attaches image tag to the image
             gifImage.attr("src", results[i].images.fixed_height_still.url);
+            gifImage.addClass("image-click");
             console.log("image gif");
             gifImage.attr("data-still", results[i].images.fixed_height_still.url);
             gifImage.attr("data-animate", results[i].images.fixed_height.url);
@@ -47,7 +48,8 @@ $.ajax({
             //add new gif to top of page
             $("#gif-div").prepend(gifDiv);
         }
-        $("gifImage").on("click", (function(){
+        $(".image-click").on("click", (function(){
+            var state=$(this).attr("data-state");
             if (state === "still"){
                 $(this).attr("src", $(this).attr("data-animate"));
                 $(this).attr("data-state", "animate");
