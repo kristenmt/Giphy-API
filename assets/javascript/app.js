@@ -36,6 +36,10 @@ $.ajax({
             //attaches image tag to the image
             gifImage.attr("src", results[i].images.fixed_height_still.url);
             console.log("image gif");
+            gifImage.attr("data-still", results[i].images.fixed_height_still.url);
+            gifImage.attr("data-animate", results[i].images.fixed_height.url);
+           // var imageStill = gifImage;
+            //var imageAnimate = gifImage.attr("src", results[i].images.fixed_height.url);
             //append the paragraph to the html
             gifDiv.append(p);
             //append image to html
@@ -43,6 +47,16 @@ $.ajax({
             //add new gif to top of page
             $("#gif-div").prepend(gifDiv);
         }
+        $("gifImage").on("click", (function(){
+            if (state === "still"){
+                $(this).attr("src", $(this).attr("data-animate"));
+                $(this).attr("data-state", "animate");
+            } else {
+                $(this).attr("src", $(this).attr("data-still"));
+                $(this).attr("data-state", "still");
+            }
+            
+        }))
     }
 })
 });
