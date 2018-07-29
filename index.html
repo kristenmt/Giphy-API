@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Giphy App</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
-            crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous"></script>
-        <script src="assets/javascript/app.js"></script>    
-    </head>
-    
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Giphy App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="assets/javascript/app.js"></script>
+</head>
+
 <body>
-    
+
     <div class="jumbotron">
         <h1 class="display-4">Gif Extravaganza</h1>
     </div>
     <div class="container">
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-12" id="buttons-div">
-                    <button type="button" class="btn btn-link" data-singers="michael jackson">Michael Jackson</button>
-                    <button type="button" class="btn btn-link" data-singers="david bowie">David Bowie</button>
-                    <button type="button" class="btn btn-link" data-singers="peter gabriel">Peter Gabriel</button>
-                    <button type="button" class="btn btn-link" data-singers="madonna">Madonna</button>
-                    <button type="button" class="btn btn-link" data-singers="huey lewis">Huey Lewis</button>
-                    <button type="button" class="btn btn-link" data-singers="guns n roses">Guns n Roses</button>
-                    <button type="button" class="btn btn-link" data-singers="tears for fears">Tears for Fears</button>
-                    <button type="button" class="btn btn-link" data-singers="inxs">INXS</button>
-                    <button type="button" class="btn btn-link" data-singers="whitney houston">Whitney Houston</button>
-                    <button type="button" class="btn btn-link" data-singers="cindi lauper">Cindi Lauper</button>
+                <button type="button" class="btn btn-link" data-singers="michael jackson">Michael Jackson</button>
+                <button type="button" class="btn btn-link" data-singers="david bowie">David Bowie</button>
+                <button type="button" class="btn btn-link" data-singers="peter gabriel">Peter Gabriel</button>
+                <button type="button" class="btn btn-link" data-singers="madonna">Madonna</button>
+                <button type="button" class="btn btn-link" data-singers="huey lewis">Huey Lewis</button>
+                <button type="button" class="btn btn-link" data-singers="guns n roses">Guns n Roses</button>
+                <button type="button" class="btn btn-link" data-singers="tears for fears">Tears for Fears</button>
+                <button type="button" class="btn btn-link" data-singers="inxs">INXS</button>
+                <button type="button" class="btn btn-link" data-singers="whitney houston">Whitney Houston</button>
+                <button type="button" class="btn btn-link" data-singers="cindi lauper">Cindi Lauper</button>
             </div>
             <div class="row">
                 <div class="col-12" id="gif-div">
@@ -40,6 +41,28 @@
             </div>
 
 
+        </div> -->
+        <div class="row">
+            <!-- buttons will show up here -->
+            <div class="col-12" id ="buttons-view">
+
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <form id="band-form">
+                        <label for="band-input">Add a singer/band</label>
+                        <input type="text" id="band-input"><br>
+                        
+                        <input id="add-band" type="submit" value="Add a singer/band">
+                    </form>
+                </div>
+            </div>
+            <!-- where gifs will show up -->
+            <div class="row">
+                <div class="col-12" id="gifs-view">
+
+                </div>
+            </div>
         </div>
 
 
@@ -51,4 +74,5 @@
     </div>
 
 </body>
+
 </html>
