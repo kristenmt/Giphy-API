@@ -3,7 +3,6 @@ $(document).ready(function () {
     var bands = ["michael jackson", "david bowie", "peter gabriel", "madonna", "huey lewis", "guns n roses", "tears for fears", "inxs", "whitney houston", "cindi lauper"];
     //displayBandInfo();
     //tells html to show buttons
-    //function displayBandInfo() {
         $(document).on("click", ".image", function(){
         var band = $(this).attr("data-name");
         console.log(band);
@@ -18,11 +17,11 @@ $(document).ready(function () {
             .then(function (response) {
                 //console.log(queryURL);
                 console.log(response);
-                //?????????????????????????????? gifDiv might go in next for loop
                 var gifDiv = $("<div class='giphy'>")
+                //stores the data in the results variable
                 var results = response.data;
                 for (var i = 0; i < results.length; i++) {
-                    //this requests results not have an "r" or "pg-13" rating
+                    //this requests giphy to only return results that don't have an "r" or "pg-13" rating
                     if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
                         //creates a div
                         var gifDiv = $("<div class='gif'>");
@@ -39,8 +38,6 @@ $(document).ready(function () {
                         console.log("image gif");
                         gifImage.attr("data-still", results[i].images.fixed_height_still.url);
                         gifImage.attr("data-animate", results[i].images.fixed_height.url);
-                        // var imageStill = gifImage;
-                        //var imageAnimate = gifImage.attr("src", results[i].images.fixed_height.url);
                         //append the paragraph to the html
                         gifDiv.append(p);
                         //append image to html
@@ -62,11 +59,6 @@ $(document).ready(function () {
                         }
                         
                     })
-                    //var pOne = $("<p>").text("Rating: " + rating);
-                    //gifDiv.append(pOne);
-                    //var image = $("<img>").attr("src", imgURL);
-                    //gifDiv.append(image);
-                    //$("#gifs-view").prepend(gifDiv);
                     renderButtons();
                 });
 
