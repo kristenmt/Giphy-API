@@ -1,0 +1,54 @@
+.jumbotron {
+    background-color: rgb(0, 255, 255);
+    color: rgb(204, 0, 150);
+    font-family: 'Monoton', cursive;
+    text-align: center;
+}
+#buttons-view{
+    margin-bottom: 30px;
+}
+form{
+    font-family: 'Monoton', cursive;
+}
+#band-lineup{
+    border-bottom: 7px solid  rgb(0, 255, 255);
+    margin-bottom: 10px;
+}
+.btn, #add-band{
+    font-family: 'Do Hyeon', sans-serif;
+    color: rgb(204, 0, 150);
+}
+.btn:hover{
+    color: rgb(204, 0, 150);
+}
+#add-band {
+    color: rgb(204, 0, 150);
+    background-color: transparent;
+    background-image: none;
+    border-color: #343a40;
+    -webkit-appearance: button;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+}
+#add-band:hover{
+    background-color: black;
+}
+input{
+    margin-bottom: 20px;
+}
+.gif{
+    float: left;
+    margin-right: 30px;
+    margin-bottom:50px;
+}
